@@ -1,4 +1,23 @@
 sublimetext2-velocity-syntax
 ============================
+(c) Rouslan Grabar 2012
 
 Velocity syntax for Sublime Text 2
+
+
+Todo
+====
+
+* block comments #* *#
+* handling of inline <script />
+* method parameters are uncolored
+* velocity extensions should be colored different (using something like support.function.vm)   
+
+
+Changelog
+=========
+
+2012-04-29
+----------
+This is the initial release of syntax definition file. it's very simple and still requires improvements (I am still to master the syntax definition language)
+

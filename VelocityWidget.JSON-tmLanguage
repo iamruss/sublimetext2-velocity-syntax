@@ -1,0 +1,81 @@
+{ 
+	"name": "Velocity Widgets",
+	"fileTypes": ["vm", "xml"], 
+	"foldingStartMarker" : "#(if(\\((.*)\\)))|foreach|elseif)",
+	"foldingStopMarker": "#end",
+	"firstLineMatch" : "<scriptedContentFragments>",
+	"patterns": [
+		{
+			"begin":"(<!\\[CDATA\\[)",
+			"beginCaptures": {
+			    "1": { "name": "comment.line.double-dash.vm" }
+			},
+			"end": "(\\]\\]>)",
+			"endCaptures": {
+			    "1": { "name": "comment.line.double-dash.vm" }
+			},
+			"patterns": [
+				{ "include": "$self" }
+			],
+			"comment":"<![CDATA[]] block"
+		},
+		{
+			"match":"(##).*$\n?",
+			"name":"comment.line.double-pound.vm",
+			"comment":"Single line comment"
+		},
+		{
+			"begin": "(\")|(')",
+			"beginCaptures": {
+			    "1": { "name": "string.quoted.double.vm" },
+			    "2": { "name": "string.quoted.single.vm" }
+			},
+			"end": "(\")|(')",
+			"endCaptures": {
+				"1": { "name": "string.quoted.double.vm" },
+				"2": { "name": "string.quoted.single.vm" }
+			},
+			"contentName": "string.quoted.double.vm"
+		},
+		{
+			"match":"(#if|#elseif|#else|#end|#foreach|#beforeall|#each|#afterall|#nodata|#set|#registerEndOfPageHtml)",
+			"name":"storage.type.var.vm",
+			"comment":"Flow controls"
+		},
+		{
+			"match":"=|==|!=|&|&&|\\|\\||\\||>=|>",
+			"name":"keyword.operator.vm"
+		},
+		{  
+			"name": "constant.language.vm",
+		   "match": "(true|false)" 
+		},
+		{ "include": "#vmproperty"	},
+		{ "include": "#vmvariable" },
+		{ "include": "text.html.basic" },
+		{}
+	],
+	"repository": {
+		"vmvariable": {
+			"name": "variable.language.vm",
+			"match": "\\$!?(\\{([a-zA-Z][a-zA-Z0-9-_]*)\\}|[a-zA-Z][a-zA-Z0-9-_]*)"
+		},
+		"vmproperty": {
+			"begin": "(\\$!?\\{?[a-zA-Z][a-zA-Z0-9-_]*)(\\.[a-zA-Z][a-zA-Z\\.0-9-_]*)+",
+			"beginCaptures": {
+				"1":{ "name": "variable.language.vm"},
+			   "2": { "name": "keyword.operator.vm" }
+			},
+			"end": "(\\((.*[^\\)])?\\))?(\\})?",
+			"endCaptures": {
+				"2": { "name": "text.velocity"},
+				"3": { "name": "variable.language.vm"}
+			},
+			"patterns": [
+				{ "include": "$self" }
+			]
+		}
+	},
+	"scopeName": "text.velocity", 
+	"uuid": "9288bbc3-6728-48e6-8fe1-cf19ddad8f7c"
+}
