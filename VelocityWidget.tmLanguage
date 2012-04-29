@@ -49,6 +49,16 @@
 			</array>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>#\*</string>
+			<key>comment</key>
+			<string>Multi line comment</string>
+			<key>end</key>
+			<string>\*#</string>
+			<key>name</key>
+			<string>comment.block.vm</string>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>Single line comment</string>
 			<key>match</key>
@@ -122,6 +132,12 @@
 		<dict>
 			<key>include</key>
 			<string>text.html.basic</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\*#|\$\$|\&gt;|\&lt;)</string>
+			<key>name</key>
+			<string>invalid.illegal.vm</string>
 		</dict>
 		<dict>
 		</dict>

@@ -20,6 +20,12 @@
 			"comment":"<![CDATA[]] block"
 		},
 		{
+			"begin": "#\\*",
+			"end": "\\*#",
+			"name":"comment.block.vm",
+			"comment":"Multi line comment"
+		},
+		{
 			"match":"(##).*$\n?",
 			"name":"comment.line.double-pound.vm",
 			"comment":"Single line comment"
@@ -53,6 +59,10 @@
 		{ "include": "#vmproperty"	},
 		{ "include": "#vmvariable" },
 		{ "include": "text.html.basic" },
+		{
+			"name": "invalid.illegal.vm",
+			"match": "(\\*#|\\$\\$|\\>|\\<)"
+		},
 		{}
 	],
 	"repository": {
