@@ -20,4 +20,8 @@ This is the initial release of syntax definition file. it's very simple and stil
 
 * http://manual.macromates.com/en/language_grammars
 * http://sublimetext.info/docs/en/extensibility/syntaxdefs.html
+* http://www.sublimetext.com/
 
+# How to use
+
+To contribute, please edit .JSON-tmLanguage file and use AAAPackageDev to convert it to .tmLanguage format.
