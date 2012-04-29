@@ -8,7 +8,7 @@ Velocity syntax for Sublime Text 2
 Todo
 ====
 
-* handling of inline <script />
+* handling of inline &lt;script /&gt;
 * method parameters are uncolored
 * velocity extensions should be colored different (using something like support.function.vm)   
 * reindent settings
