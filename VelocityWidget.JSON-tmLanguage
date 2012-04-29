@@ -48,20 +48,20 @@
 			"name":"storage.type.var.vm",
 			"comment":"Flow controls"
 		},
-		{
-			"match":"=|==|!=|&|&&|\\|\\||\\||>=|>",
-			"name":"keyword.operator.vm"
-		},
 		{  
 			"name": "constant.language.vm",
 		   "match": "(true|false)" 
+		},
+		{
+			"match":"=|==|!=|&&?|\\|\\||\\||>=|>",
+			"name":"keyword.operator.vm"
 		},
 		{ "include": "#vmproperty"	},
 		{ "include": "#vmvariable" },
 		{ "include": "text.html.basic" },
 		{
 			"name": "invalid.illegal.vm",
-			"match": "(\\*#|\\$\\$|\\>|\\<)"
+			"match": "(\\*#|\\$\\$|\\>)"
 		},
 		{}
 	],

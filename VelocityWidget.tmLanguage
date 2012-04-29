@@ -111,15 +111,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>=|==|!=|&amp;|&amp;&amp;|\|\||\||&gt;=|&gt;</string>
-			<key>name</key>
-			<string>keyword.operator.vm</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>(true|false)</string>
 			<key>name</key>
 			<string>constant.language.vm</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>=|==|!=|&amp;&amp;?|\|\||\||&gt;=|&gt;</string>
+			<key>name</key>
+			<string>keyword.operator.vm</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -135,7 +135,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\*#|\$\$|\&gt;|\&lt;)</string>
+			<string>(\*#|\$\$|\&gt;)</string>
 			<key>name</key>
 			<string>invalid.illegal.vm</string>
 		</dict>
