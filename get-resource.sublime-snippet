@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[\$core_v2_language.GetResource('${1:Resource_Id}')]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>gr</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>text.velocity</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>$core_v2_language.GetResource</description>
+</snippet>

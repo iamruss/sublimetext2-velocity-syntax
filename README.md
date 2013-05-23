@@ -1,5 +1,5 @@
 # sublimetext2-velocity-syntax
-(c) Rouslan Grabar 2012
+(c) Rouslan Grabar 2013
 
 Velocity syntax for Sublime Text 2
 

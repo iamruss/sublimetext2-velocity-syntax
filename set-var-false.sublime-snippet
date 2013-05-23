@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[#set(\$${1:variable} = false)]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>setf</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>text.velocity</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>set variable to false</description>
+</snippet>
