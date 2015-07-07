@@ -1,0 +1,40 @@
+<snippet>
+    <content><![CDATA[
+<scriptedContentFragments>
+	<scriptedContentFragment name="\${resource:Widget_Title}" cssClass="${1:CSS-CLASS}" description="\${resource:Widget_Description}" instanceIdentifier="${2:GUID}" theme="${3:THEME_ID}" isCacheable="true" varyCacheByUser="false" showHeaderByDefault="false">
+		<contentScript>
+<![CDATA[
+$0
+]]${-1}>
+		</contentScript>
+		<headerScript>
+<![CDATA[
+\$core_v2_widget.ApplyTokens(\$core_v2_widget.GetStringValue('fragmentHeader', '\${resource:Widget_Title}'))
+]]${-1}>
+		</headerScript>
+		<configuration>
+<![CDATA[
+<propertyGroup id="options" resourceName="Options">
+	<property id="fragmentHeader" resourceName="CF_Title" dataType="string" defaultValue="\${resource:Widget_Title}" controlType="Telligent.Evolution.Controls.ContentFragmentTokenStringControl, Telligent.Evolution.Controls" />
+</propertyGroup>
+]]${-1}>
+		</configuration>
+		<requiredContext />
+		<languageResources>
+			<language key="en-us">
+				<resource name="Widget_Title">Cherwell - Conference - Speaker Profile</resource>
+				<resource name="Widget_Description">Displays details about speaker.</resource>
+				<resource name="Options">Options</resource>
+				<resource name="CF_Title">Widget Title</resource>
+			</language>
+		</languageResources>
+	</scriptedContentFragment>
+</scriptedContentFragments>
+    	]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>newwidget</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <!-- <scope>text.velocity</scope> -->
+    <!-- Optional: Description to show in the menu -->
+    <description>New Zimbra NVelocity widget</description>
+</snippet>
