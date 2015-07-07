@@ -1,7 +1,7 @@
 # sublimetext2-velocity-syntax
-(c) Rouslan Grabar 2013
+(c) Rouslan Grabar 2015
 
-Velocity syntax for Sublime Text 2
+Velocity syntax for Sublime Text 2/3
 
 # Todo
 
@@ -11,6 +11,10 @@ Velocity syntax for Sublime Text 2
 * reindent settings
 
 # Changelog
+
+##2015-07-07
+
+Added snippet which creates new NVelocity widget. To use, create a new empty file, type `newwidget` and press TAB key to expand. Then fill-in/edit required parameters and start hacking on the widget.
 
 ##2012-04-29
 
